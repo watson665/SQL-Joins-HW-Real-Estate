@@ -24,3 +24,36 @@ SELECT *
 FROM tenants
 LIMIT 10;
 
+SELECT name, age, gender
+FROM tenants
+LIMIT 10;
+
+SELECT *
+FROM tenants 
+where age > 65
+order by age asc;
+
+SELECT *
+FROM tenants
+where id = 20;
+
+SELECT *
+FROM tenants
+where id between 20 and 21;
+
+SELECT doormen.name, buildings.address
+FROM doormen
+INNER JOIN buildings
+ON doormen.building_id = buildings.id;
+
+DELETE FROM tenants where age > 65;
+
+UPDATE doormen
+SET shift = 'Night' 
+WHERE building_id = 3;
+
+INSERT INTO tenants (id, name, age, gender, apartment_id)
+VALUES (6, 'Smokey Robinson', 48, 'male', 3);
+
+
+
